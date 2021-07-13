@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap');
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, rgb(236, 236, 250), rgb(123, 15, 247));
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 10px;
+}
+
+input[type=submit] {
+    padding: 12px 20px;
+    background-color: rgb(2, 114, 30);
+    font: 'Roboto', sans-serif;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+}
