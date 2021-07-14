@@ -24,7 +24,7 @@ input[type=text] {
     margin: 10px;
 }
 
-input[type=submit] {
+button {
     padding: 12px 20px;
     background-color: rgb(2, 114, 30);
     font: 'Roboto', sans-serif;
@@ -32,4 +32,14 @@ input[type=submit] {
     border: none;
     cursor: pointer;
     border-radius: 5%;
+}
+
+.todolist-styling {
+    padding: 12px 20px;
+    margin: 10px;
+    background-color: rgb(247, 231, 231);
+}
+
+.todolist-styling:hover {
+    background-color: rgb(133, 125, 125);
 }
