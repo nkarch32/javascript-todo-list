@@ -29,9 +29,13 @@ function addTask() {
     } else {
         /* Add tasks to the toDoListContainer and style the new children nodes */
         const toDoList = document.createElement("li");
+        const toDoListDeleteBtn = document.createElement("button"); //add a cancel button to each task
         toDoList.innerText = inputField.value;
+        toDoListDeleteBtn.innerText = "Delete Task";
         toDoList.classList.add("todolist-styling"); //add a classname to new nodes, so they may be styled via css
+        toDoListDeleteBtn.classList.add("delete-task-styling"); //css classname for delete btn
         toDoListContainer.appendChild(toDoList);
+        toDoList.appendChild(toDoListDeleteBtn);
         inputField.value = "";
 
     }
@@ -46,41 +50,37 @@ document.addEventListener("keypress", function(e) {
     }
 });
 
+/* Delete Button Things... Work in Progress
+
+const deleteTask = function() {
+    const toDoList = this.parentNode;
+    const ul = toDoList.parentNode;
+    ul.removeChild(toDoList);
+};
+
+for (var i = 0; i> toDoListContainer.children.length; i++) {
+    bindTaskEvents(toDoListContainer.children[i])
+
+};
+
+const toDoListDeleteBtn = document.createElement('button');
+toDoListDeleteBtn.onclick = deleteTask;*/
 
 
 
 
 
 
+/*function deleteTask() {
+    
+    /*const removeTask = document.getElementsByClassName("delete-task-styling");
+    var i;
+    for (i = 0; i < removeTask.length; i++) {
+        close[i].onclick = function() {
+            let div = this.parentElement;
+            div.style.display = "none";
+        }
+    }*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*const task = document.getElementById("text").value;
-const submit = document.getElementById("submit");
-
-function addTask() {
-    const toDoList = document.createElement("LI");
-    const newTask = document.getElementById("text").value;
-    const t = document.createTextNode(newTask);
-    toDoList.appendChild(t);
-    //toDoList.appendChild(newTask);
-    //document.getElementById("taskList").appendChild(newTask);
-    //console.log();
-    /*document.getElementById("taskList").innerHTML = `${task}`;
-}
-
-submit.addEventListener("click", addTask);*/
+/*const toDoListDeleteBtn = document.createElement("button");
+ toDoListDeleteBtn.addEventListener('click', deleteTask);*/
