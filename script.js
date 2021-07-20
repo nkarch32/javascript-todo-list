@@ -7,7 +7,10 @@ window.onload = function() {
         "I have not failed. I've just found 10,000 ways that won't work. -Thomas Edison",  
         "You do not find the happy life. YOU MAKE IT. -Camilla Eyring Kimball", 
         "You must do the things you think you cannot do. -Eleanor Roosevelt", 
-        "It isn't where you came from. It's where you're going that counts. -Ella Fitzgerald"
+        "It isn't where you came from. It's where you're going that counts. -Ella Fitzgerald",
+        "The best preparation for tomorrow is doing your best today. -H. Jackson Brown, Jr.",
+        "Ah, but a man's reach should exceed his grasp, Or what's a heaven for? -Robert Browning",
+        "Give light and people will find the way. -Ella Baker"
     ];
     const randomQuote = niceQuotes[Math.floor(Math.random() * niceQuotes.length)];
     
@@ -21,6 +24,8 @@ window.onload = function() {
 const addTaskButton = document.getElementById("addTask");
 const toDoListContainer = document.getElementById("toDoContainer");
 const inputField = document.getElementById("inputField");
+
+/*adds and deletes tasks*/
 
 function addTask() {
     
@@ -39,6 +44,15 @@ function addTask() {
         inputField.value = "";
 
     }
+    
+    /*Delete Tasks*/
+
+    const close = document.querySelectorAll('.delete-task-styling');
+    for (let i = 0; i < close.length; i++) {
+      close[i].addEventListener('click', () => {
+        close[i].parentElement.style.display = 'none';
+      });
+    }
 
 }
 
@@ -49,38 +63,3 @@ document.addEventListener("keypress", function(e) {
         addTask();
     }
 });
-
-/* Delete Button Things... Work in Progress
-
-const deleteTask = function() {
-    const toDoList = this.parentNode;
-    const ul = toDoList.parentNode;
-    ul.removeChild(toDoList);
-};
-
-for (var i = 0; i> toDoListContainer.children.length; i++) {
-    bindTaskEvents(toDoListContainer.children[i])
-
-};
-
-const toDoListDeleteBtn = document.createElement('button');
-toDoListDeleteBtn.onclick = deleteTask;*/
-
-
-
-
-
-
-/*function deleteTask() {
-    
-    /*const removeTask = document.getElementsByClassName("delete-task-styling");
-    var i;
-    for (i = 0; i < removeTask.length; i++) {
-        close[i].onclick = function() {
-            let div = this.parentElement;
-            div.style.display = "none";
-        }
-    }*/
-
-/*const toDoListDeleteBtn = document.createElement("button");
- toDoListDeleteBtn.addEventListener('click', deleteTask);*/
